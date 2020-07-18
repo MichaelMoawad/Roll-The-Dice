@@ -1,0 +1,206 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+.final-score {
+    padding-top: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform: translateY(500px); */
+    top: 520px;
+    color: rgb(202, 199, 199);
+    font-size: 18px;
+    font-family: "Rowdies", cursive;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+}
+
+.final-score:focus {
+    outline: none;
+}
+
+#dice-1 {
+    top: 350px;
+}
+#dice-2 {
+    top: 480px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background: rgb(48, 38, 38);
+    background: linear-gradient(
+        321deg,
+        rgba(48, 38, 38, 1) 0%,
+        rgba(140, 107, 107, 1) 100%
+    );
+    background-size: cover;
+    background-position: center;
+    font-family: "Rowdies", cursive;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: rgb(202, 199, 199);
+}
+
+.wrapper {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #615050;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.player-0-panel,
+.player-1-panel {
+    margin-top: 200px;
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+    border-radius: 25%;
+}
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #eb4d4d;
+    margin-bottom: 130px;
+}
+
+.active {
+    background-color: #302626;
+}
+.active .player-name {
+    font-weight: 300;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #eb4d4d;
+    top: -7px;
+    right: 10px;
+}
+
+.player-current-box {
+    background-color: #eb4d4d;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 25%;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(202, 199, 199);
+    background: none;
+    border: none;
+    font-family: "Rowdies", cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+}
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #eb4d4d;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new {
+    top: 145px;
+}
+.btn-roll {
+    top: 650px;
+}
+.btn-hold {
+    top: 700px;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+.winner .player-name {
+    font-weight: 300;
+    color: #eb4d4d;
+}
