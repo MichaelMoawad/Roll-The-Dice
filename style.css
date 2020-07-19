@@ -158,7 +158,7 @@ button {
 
 button:hover {
     font-weight: 700;
-    font-size: 23px;
+    font-size: 22px;
     /* margin-bottom: 10px; */
     transition: 0.3s;
 }
